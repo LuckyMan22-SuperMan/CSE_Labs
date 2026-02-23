@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<title>calculator</title>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<script type = "text/javascript" language = "javascript">
+
+			$(document).ready(function() 
+			{
+				$('button').click(function() 
+				{
+					var value1 = Number($("#test1").val());
+					var value2 = Number($("#test2").val());
+					var opp=$("#test3").val();
+					var sum=0;
+					if(opp=="-")
+						sum = value1 - value2;
+					else if(opp=="+")
+						sum = value1 + value2;
+					else if(opp=="/")
+						sum = value1 / value2;
+					else if(opp=="*")
+						sum = value1 * value2;
+					alert("Value: " + sum);
+				}); // end click
+				
+			});
+		</script>
+	</head>
+	
+	<body>
+		<h1>Calculator</h1>
+		<p> Number 1: 
+			<input type="number" id="test1" value="0"> 
+		</p>
+		<p>Number 2: 
+			<input type="number" id="test2" value="0">
+		</p>
+		<p>Operator: 
+			<input type="text" id="test3" value="0">
+		</p>
+		
+		<button>Calculate</button>
+	</body>
+</html>
+		

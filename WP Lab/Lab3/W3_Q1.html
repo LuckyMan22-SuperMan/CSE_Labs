@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    
+    <title>Student Bio-Data</title>
+</head>
+
+<body class="bg-light">
+    <div>
+        <h2 class="text-center mb-4">Student Bio-Data Form</h2>
+        <table class="table table-borderless">
+            <tr>
+                <td><label class="form-label">Full Name:</label></td>
+                <td><input type="text" class="form-control" placeholder="Enter Name"></td>
+            </tr>
+            <tr>
+                <td><label class="form-label">Gender:</label></td>
+                <td>
+                    <div>
+                        <input class="form-check-input" type="radio" name="gender" id="m">
+                        <label class="form-check-label" for="m">Male</label>
+                    </div>
+                    <div>
+                        <input class="form-check-input" type="radio" name="gender" id="f">
+                        <label class="form-check-label" for="f">Female</label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Hobbies:</label></td>
+                <td>
+                    <input type="checkbox"> Whistling
+                    <input type="checkbox"> Watching Movies
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="text-center">
+                    <button type="submit">Submit</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

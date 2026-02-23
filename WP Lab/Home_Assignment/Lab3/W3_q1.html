@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Train Ticket Booking</title>
+
+
+  <link rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script
+  src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script
+  src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js" ></script>
+  <script
+  src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body class="bg-light">
+
+
+<nav class="navbar navbar-dark bg-primary">
+  <div class="container">
+  </div>
+</nav>
+
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card shadow">
+        <div class="card-header bg-success text-white text-center">
+          <h4>Train Ticket Booking Form</h4>
+        </div>
+
+        <div class="card-body">
+          <form>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label class="form-label">From</label>
+                <input type="text" class="form-control" placeholder="Source Station">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">To</label>
+                <input type="text" class="form-control" placeholder="Destination Station">
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <div class="col-md-4">
+                <label class="form-label">Date</label>
+                <input type="date" class="form-control">
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">Class</label>
+                <select class="form-select">
+                  <option>Sleeper</option>
+                  <option>3AC</option>
+                  <option>2AC</option>
+                  <option>1AC</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">Passengers</label>
+                <input type="number" class="form-control" min="1" max="6">
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Passenger Name</label>
+              <input type="text" class="form-control">
+            </div>
+
+            <div class="d-grid">
+              <button class="btn btn-success btn-lg">
+                <i class="bi bi-ticket-perforated"></i> Book Ticket
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div class="card-footer text-center text-muted">
+          Lakshya's Railways Business
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+    
+    <title>Q3</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript" language="javascript">
+    
+        $(document).ready(function () 
+        {
+            $(".update").click(function () {
+                let bgColor = $("#bgColor").val();
+                let font = $("#font").val();
+                let fontSize = $("#size").val();
+                let borderStyle = $("input[name='borderstyle']:checked").val();
+                let addPicture = $("#pic").prop("checked");
+                let greetingText = $("textarea").val();
+                  $(".rightdiv").css("background-color", bgColor);
+                  $(".rightdiv p, .rightdiv textarea").css("font-family", font);
+                  $(".rightdiv p, .rightdiv textarea").css("font-size", fontSize + "px");
+                  $(".rightdiv").css("border", borderStyle ? borderStyle : "none");
+                  if (addPicture) {
+                      $(".rightdiv img").show();
+                  }
+                  else {
+                    $(".rightdiv img").hide();
+                  }
+                  $(".rightdiv p").text(greetingText || "Happy Birthday, and many more");
+            });
+        });
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .maindiv {
+            display: flex;
+            flex-direction: row;
+        }
+        .leftdiv {
+            background-color: bisque;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding-left: 50px;
+            gap: 20px;
+            padding-bottom: 10px;
+        }
+        .rightdiv {
+            background-color: yellow;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            padding: 50px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .rightdiv img {
+            display: none; 
+        }
+        .update {
+            margin-top: 20px;
+        }
+    </style>
+ </head>
+ <body>
+    <div class="maindiv">
+        <div class="leftdiv">
+            <p>Choose a background color:</p>
+            <div>
+                <select name="colors" id="bgColor">
+                    <option value="yellow">yellow</option>
+                    <option value="red">red</option>
+                    <option value="green">green</option>
+                    <option value="purple">purple</option>
+                </select>
+            </div>
+            <p>Choose a font:</p>
+            <select name="fonts" id="font">
+                <option value="Arial">Arial</option>
+                <option value="Calibri">Calibri</option>
+            </select>
+            <p>Specify a numeric font size:</p>
+            <input type="text" name="size" id="size">
+            <p>Choose a border style</p>
+            <div style="display: flex; flex-direction: column; align-items: flex-start;">
+                <div style="display: flex; flex-direction: row; gap: 10px;">
+                    <input type="radio" name="borderstyle" value="none" checked><p>None</p>
+                </div>
+                <div style="display: flex; flex-direction: row; gap: 10px;">
+                    <input type="radio" name="borderstyle" value="double"><p>Double</p>
+                </div>
+                <div style="display: flex; flex-direction: row; gap: 10px;">
+                    <input type="radio" name="borderstyle" value="solid"><p>Solid</p>
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 10px">
+                <input type="checkbox" id="pic" name="pic" />
+                <p>Do you want pic?</p>
+            </div>
+            <div>
+                <p>Enter the greeting: </p>
+                <textarea id="greetingText"></textarea>
+            </div>
+            <button class="update">Update</button>
+        </div>
+        <div class="rightdiv">
+            <p>Happy Birthday to u</p>
+            <img src="/home/WP_B2/Pictures/cake.jpeg" width="250" height="250" />
+        </div>
+    </div>
+ </body>
+</html

@@ -1,0 +1,68 @@
+<html>
+	<head>
+		<title>QQ1</title>
+		<style>
+			tr:nth-child(even)
+			{
+				background-color: pink;
+			}
+			tr:nth-child(odd)
+			{
+				background-color: green;
+			}
+			th
+			{
+				background-color: skyblue;
+			}
+		</style>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<script type = "text/javascript" language = "javascript">
+
+			$(document).ready(function() 
+			{
+				$('#button').click(function() 
+				{
+					//$(".dv").animate({left: '250px'}); //if using class in line 37
+					//$("div").animate({left: '250px'});  if not using any id or class in line 37
+					$("#div_id").animate({left: '250px'}); //if using id in line 37
+				}); // end click
+				
+			});
+		</script>
+	</head>
+	
+	<body>
+	
+		<br>
+		<button id="button">Move</button>
+		<div id ='div_id' style="background:#ffffff;height: 600px; width:600px;position:absolute;">
+			<table>
+				<tr>
+					<th>Sno</th>
+					<th>Name</th>
+					<th>Roll</th>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>Lakshya</td>
+					<td>63</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>Aditya</td>
+					<td>64</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>NewAditya</td>
+					<td>65</td>
+				</tr>
+			
+			</table>
+			<br><img src="/home/WP_B2/Pictures/peacock.jpeg">
+		</div>
+		
+		
+	</body>
+</html>

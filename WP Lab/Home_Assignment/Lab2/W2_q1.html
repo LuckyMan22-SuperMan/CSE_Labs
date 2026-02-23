@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Produce Bill</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .container { margin: 20px; font-family: sans-serif; line-height: 2; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <label>Brand:</label>
+        <select id="brand">
+            <option value="HP">HP</option>
+            <option value="Nokia">Nokia</option>
+            <option value="Samsung">Samsung</option>
+            <option value="Motorola">Motorola</option>
+            <option value="Apple">Apple</option>
+        </select><br>
+
+        <label>Items:</label>
+        <input type="checkbox" class="item" value="500"> Mobile (Price: 500)
+        <input type="checkbox" class="item" value="1000"> Laptop (Price: 1000)<br>
+
+        <label>Quantity:</label>
+        <input type="number" id="qty" value="1" min="1"><br>
+
+        <button id="produceBill">Produce Bill</button>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $("#produceBill").click(function() {
+                let totalPerItem = 0;
+                $(".item:checked").each(function() {
+                    totalPerItem += parseInt($(this).val());
+                });
+
+                let quantity = parseInt($("#qty").val());
+                let finalTotal = totalPerItem * quantity;
+
+                alert("Brand: " + $("#brand").val() + "\nTotal Amount: $" + finalTotal);
+            });
+        });
+    </script>
+</body>
+</html>
